@@ -1,6 +1,5 @@
 package ua.com.airline.view;
 
-import junit.framework.Assert;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -31,7 +30,7 @@ public class ConsoleWorkerTest {
     @Test
     public void showMenu() throws Exception {
         when(bufferedReader.readLine()).thenReturn("1");
-        Assert.assertEquals(consoleWorker.showMenu(),"1");
+        assertEquals(consoleWorker.executeMenu(),"1");
 
         verify(bufferedReader).readLine();
         verifyNoMoreInteractions(bufferedReader);
