@@ -5,6 +5,6 @@ package ua.com.airline;
  */
 public class AirlineStarter {
     public static void main(String[] args) {
-        
+
     }
 }
