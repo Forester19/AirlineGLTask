@@ -13,18 +13,20 @@ public class Frontline extends Military {
        this.power = frontlineBuilder.getPower();
        this.carrying = frontlineBuilder.getCarrying();
        this.range = frontlineBuilder.getRange();
+       this.fuel = frontlineBuilder.getFuel();
        this.ammunition = frontlineBuilder.getAmmunition();
        this.protectionRadars = frontlineBuilder.isProtectionRadars();
        this.timeOfReloading = frontlineBuilder.getTimeOfReloading();
        this.reactiveSpeed = frontlineBuilder.isReactiveSpeed();
     }
 
-    public class FrontlineBuilder{
+    public static class FrontlineBuilder{
         private String title;
         private String description;
         private int  power;
         private int  carrying;
         private int  range;
+        private int  fuel;
         private int ammunition;
         private boolean protectionRadars;
         private int timeOfReloading;
@@ -42,6 +44,10 @@ public class Frontline extends Military {
             this.power = power;
             return this;
         }
+        public FrontlineBuilder fuel(int fuel){
+            this.fuel = fuel;
+            return this;
+        }
         public FrontlineBuilder carrying(int carrying){
             this.carrying = carrying;
             return this;
@@ -54,7 +60,7 @@ public class Frontline extends Military {
             this.ammunition =ammunition;
             return this;
         }
-        public FrontlineBuilder ammunition(boolean pr){
+        public FrontlineBuilder protctionRadar(boolean pr){
             this.protectionRadars =pr;
             return this;
         }
@@ -80,6 +86,10 @@ public class Frontline extends Military {
 
         public int getPower() {
             return power;
+        }
+
+        public int getFuel() {
+            return fuel;
         }
 
         public int getCarrying() {

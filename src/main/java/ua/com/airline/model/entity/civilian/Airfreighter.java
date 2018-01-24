@@ -12,17 +12,19 @@ public class Airfreighter extends Civilian {
         this.power = airfreighterBuilder.getPower();
         this.carrying = airfreighterBuilder.getCarrying();
         this.range = airfreighterBuilder.getRange();
+        this.fuel = airfreighterBuilder.getFuel();
         this.seatsCount = airfreighterBuilder.getSeatsCount();
         this.staffCount = airfreighterBuilder.getStaffCount();
         this.reinforcedChassis = airfreighterBuilder.isReinforcedChassis();
     }
 
-    public class AirfreighterBuilder {
+    public static class AirfreighterBuilder {
         private String title;
         private String description;
         private int power;
         private int carrying;
         private int range;
+        private int fuel;
         private int seatsCount;
         private int staffCount;
         private boolean reinforcedChassis;
@@ -41,7 +43,10 @@ public class Airfreighter extends Civilian {
             this.power = power;
             return this;
         }
-
+        public AirfreighterBuilder fuel(int fuel) {
+            this.fuel = fuel;
+            return this;
+        }
         public AirfreighterBuilder carrying(int carrying) {
             this.carrying = carrying;
             return this;
@@ -67,7 +72,7 @@ public class Airfreighter extends Civilian {
             return this;
         }
 
-        public Airfreighter biuld() {
+        public Airfreighter build() {
             return new Airfreighter(this);
         }
 
@@ -89,6 +94,10 @@ public class Airfreighter extends Civilian {
 
         public int getRange() {
             return range;
+        }
+
+        public int getFuel() {
+            return fuel;
         }
 
         public int getSeatsCount() {

@@ -37,4 +37,10 @@ public class ConsoleWorkerTest {
 
     }
 
+    @Test
+    public void getStringParams() throws Exception {
+        boolean a = consoleWorker.validationFuelParams("15-23");
+        System.out.println(a);
+    }
+
 }

@@ -9,6 +9,7 @@ public abstract class Plane {
     protected int  power;
     protected int  carrying;
     protected int  range;
+    protected int  fuel;
 
     public Plane() {
     }
@@ -53,8 +54,16 @@ public abstract class Plane {
         this.range = range;
     }
 
+    public int getFuel() {
+        return fuel;
+    }
+
+    public void setFuel(int fuel) {
+        this.fuel = fuel;
+    }
+
     @Override
     public String toString() {
-        return title + '\'' + description + '\''+ power +'\''+ carrying +'\''+ range;
+        return title +" "+ description + " "+ power +" "+ carrying +" "+ range + " " + fuel;
     }
 }
