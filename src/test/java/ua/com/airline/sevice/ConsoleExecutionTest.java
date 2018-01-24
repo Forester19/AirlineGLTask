@@ -4,15 +4,13 @@ import junit.framework.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Mockito;
-import ua.com.airline.Airline;
+import ua.com.airline.model.Airline;
 import ua.com.airline.model.entity.Plane;
 import ua.com.airline.model.entity.military.Frontline;
 import ua.com.airline.view.ConsoleWorker;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import static org.junit.Assert.*;
 
 /**
  * Created by Владислав on 24.01.2018.

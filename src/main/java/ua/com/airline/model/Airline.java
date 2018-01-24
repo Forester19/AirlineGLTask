@@ -1,4 +1,4 @@
-package ua.com.airline;
+package ua.com.airline.model;
 
 import ua.com.airline.model.entity.Plane;
 import ua.com.airline.model.entity.civilian.Airfreighter;

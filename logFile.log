@@ -64,3 +64,29 @@
 
 [INFO] 05:15:32 (ConsoleExecution.java:doExecution:34)Detected param from user 3 
 
+[INFO] 10:20:09 (ConsoleWorker.java:<init>:21)Crated instance ua.com.airline.view.ConsoleWorker@66480dd7 
+
+[INFO] 10:21:28 (ConsoleWorker.java:<init>:21)Crated instance ua.com.airline.view.ConsoleWorker@7cc355be 
+
+[INFO] 10:21:48 (ConsoleWorker.java:executeMenu:35)Selected var 2 
+
+[INFO] 10:21:48 (ConsoleExecution.java:doExecution:34)Detected param from user 2 
+
+[INFO] 10:29:05 (ConsoleWorker.java:<init>:21)Crated instance ua.com.airline.view.ConsoleWorker@7cc355be 
+
+[INFO] 10:29:30 (ConsoleWorker.java:executeMenu:35)Selected var 8 
+
+[INFO] 10:29:30 (ConsoleExecution.java:doExecution:37)Detected param from user 8 
+
+[INFO] 10:41:17 (ConsoleWorker.java:<init>:21)Crated instance ua.com.airline.view.ConsoleWorker@7cc355be 
+
+[INFO] 10:41:30 (ConsoleWorker.java:executeMenu:35)Selected var 1 
+
+[INFO] 10:41:30 (ConsoleExecution.java:doExecution:37)Detected param from user 1 
+
+[INFO] 10:41:36 (ConsoleWorker.java:<init>:21)Crated instance ua.com.airline.view.ConsoleWorker@7cc355be 
+
+[INFO] 10:41:38 (ConsoleWorker.java:executeMenu:35)Selected var 9 
+
+[INFO] 10:41:38 (ConsoleExecution.java:doExecution:37)Detected param from user 9 
+

@@ -1,7 +1,7 @@
 package ua.com.airline.model.entity.civilian;
 
 /**
- * Created by Владислав on 23.01.2018.
+ * Entity class using builder.
  */
 public class Airfreighter extends Civilian {
     private boolean reinforcedChassis;

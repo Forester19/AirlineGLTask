@@ -1,5 +1,6 @@
 package ua.com.airline;
 
+import ua.com.airline.model.Airline;
 import ua.com.airline.sevice.ConsoleExecution;
 import ua.com.airline.view.ConsoleWorker;
 import ua.com.airline.view.UIWorker;

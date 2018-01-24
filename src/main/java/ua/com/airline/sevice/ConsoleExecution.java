@@ -1,13 +1,16 @@
 package ua.com.airline.sevice;
 
 import org.apache.log4j.Logger;
-import ua.com.airline.Airline;
-import ua.com.airline.Company;
+import ua.com.airline.AirlineStarter;
+import ua.com.airline.model.Airline;
+import ua.com.airline.model.Company;
 import ua.com.airline.model.entity.Plane;
 import ua.com.airline.view.ConsoleWorker;
 import ua.com.airline.view.UIWorker;
 
+import java.io.File;
 import java.io.IOException;
+import java.net.URISyntaxException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -34,6 +37,11 @@ public class ConsoleExecution {
         logger.info("Detected param from user " + selVar);
         if (selVar < 1 || selVar > 5) {
             System.out.println("Bad way number ");
+            try {
+                restartApplication();
+            } catch (URISyntaxException e) {
+                logger.error("Error in restarting app " + e);
+            }
         }
         if (selVar == 1) {
             for (Plane plane : airline.getAllPlanes()) {
@@ -107,5 +115,23 @@ public class ConsoleExecution {
         return newPlanesList;
     }
 
+    public void restartApplication() throws URISyntaxException, IOException {
+        final String javaBin = System.getProperty("java.home") + File.separator + "bin" + File.separator + "java";
+        final File currentJar = new File(AirlineStarter.class.getProtectionDomain().getCodeSource().getLocation().toURI());
+
+  /* is it a jar file? */
+        if(!currentJar.getName().endsWith(".jar"))
+            return;
+
+  /* Build command: java -jar application.jar */
+        final ArrayList<String> command = new ArrayList<String>();
+        command.add(javaBin);
+        command.add("-jar");
+        command.add(currentJar.getPath());
+
+        final ProcessBuilder builder = new ProcessBuilder(command);
+        builder.start();
+        System.exit(0);
+    }
 
 }
